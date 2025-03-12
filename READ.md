@@ -43,3 +43,40 @@ c. To consolidate the templating for our project , modify the following
 - register this change in settings.py for the project under the templates directory settings
         'DIRS' : [BASE_DIR / 'templates'], # Add this line
 
+### DATABASES
+Organised collection of data that allows users to store, retrieve , update and delete information more effectively.
+### TYPES OF DATABASES
+1. Relational Databases
+store data in tables : rows(records) and columns(fields)
+tables can be related
+uses the SQL query language
+2. NoSQL Databases
+3. In-Memory Databases
+### WHY USE DB's 
+1. Persistent data storage
+2. Efficient data retrieval
+3. Data relationship
+4. Security an integrity
+### USING DB's IN DJANGO
+1. Define the model data
+2. Use django migration commands to convert our models into actual database tables
+3. Object Relational Mappers(ORM's ) to interact with the db using python code instead of raw SQL statements 
+### TO CONVERT MODELS TO TABLES
+1. python3 manage.py makemigrations appname
+2. python3 manage.py migrate
+### DATABASE CREATION
+1. Double click on the db.sqlite
+2. click the + sign or the prompt to create the data source(for development use sqlite)
+### RELATIONAL DATABASES: DATABASE RELATIONSHIPS
+1. One to Many relationship
+- Taskers table (contain the users who perform the tasks)
+- Task table(Contains the tasks)
+To establish a one to many relationship establish a foreign key
+- a unique key pointing to a unique reference in another db table 
+2. Many to many relationship
+
+### HOW TO ADD IMAGES (STATIC)
+Django uses static directory
+templates directory/ => static/ => images/
+Add {%load static%} at the top of the html file
+# Ensure Django knows where to find static 
